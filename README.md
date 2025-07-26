@@ -5,6 +5,8 @@ Vendor performance analysis using Python, Power BI, and SQL
 
 [Power BI dashboard](https://drive.google.com/file/d/1Rwdx3EMwJHD_2IxDLvlZ6Z7xy-sfWL6j/view?usp=drive_link))
 
+[DASHBOARD PDF](https://drive.google.com/file/d/1c4N_bqLmh0rL4J8pTm9oulegKOOU07H7/view?usp=sharing)
+
 ## Dataset
 
 - `vendor_sales_summary.csv` – Final processed dataset for analysis
