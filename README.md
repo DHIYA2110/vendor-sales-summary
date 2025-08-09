@@ -65,14 +65,8 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 
 ---
 
-### **6️⃣ Pareto Vendor Analysis**
-*(Already shown in Section 1)*
-- Pareto chart confirms that **~20% of vendors contribute ~80% of total purchases**, reinforcing the need to **focus relationship management** on these key players.
-- **Strategic implication**: Strengthen terms with the top 20% vendors to secure better pricing and priority supply.
 
----
-
-### **7️⃣ Operational Metrics from Vendor Summary**
+### **6️⃣  Operational Metrics from Vendor Summary**
 - **Stock Turnover** analysis shows certain vendors have **slower-moving stock**, increasing **holding costs**.
 - **Sales-to-Purchase Ratio** highlights inefficiencies in converting purchases into sales for some vendors.
 - **Strategic implication**: Optimize reorder points and negotiate flexible purchase agreements for slow-moving inventory.
