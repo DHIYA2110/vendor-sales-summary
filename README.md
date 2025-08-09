@@ -43,7 +43,7 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 ---
 
 ### **3️⃣ Profitability Analysis**
-![Vendor Profit Margin Distribution](reports/images/vendor_profit_margin_distribution.png)
+
 ![Profit Margin Confidence Interval](reports/images/profit_margin_confidence_interval.png)
 - **Profit Margin Distribution** shows strong margins for certain vendors, while others have **thin or negative margins**, potentially due to **discount-heavy strategies** or **pricing misalignment**.
 - **Confidence interval analysis** indicates a **clear performance gap** between top and bottom vendors, suggesting that **margin optimization** could boost overall profitability.
