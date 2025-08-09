@@ -1,10 +1,10 @@
-###Vendor Sales Summary 
+### Vendor Sales Summary 
 
- ##Project Overview
+ ## Project Overview
 This project analyzes vendor sales performance by integrating and transforming raw sales, purchase, pricing, and freight datasets into a single vendor sales summary table.
 The analysis focuses on profitability, inventory efficiency, vendor contributions, and pricing strategies, with actionable business insights and visualizations.
 
-##project Structure
+## project Structure
 ![project_structure](reports/images/project_structure.png)
 
 
