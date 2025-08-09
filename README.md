@@ -1,5 +1,5 @@
 Vendor Sales Summary & Performance Analysis
-📌 Project Overview
+ Project Overview
 This project analyzes vendor sales performance by integrating and transforming raw sales, purchase, pricing, and freight datasets into a single vendor sales summary table.
 The analysis focuses on profitability, inventory efficiency, vendor contributions, and pricing strategies, with actionable business insights and visualizations.
 
@@ -10,7 +10,7 @@ Project Structure
 
 ---
 
-## 🔄 Methodology
+##  Methodology
 1. **Data Ingestion** – All raw CSV files are loaded into `inventory.db` using `ingestion_db.py`.
 2. **Data Transformation** – `get_vendor_summary.py` merges purchase, sales, price, and freight data to create a **vendor_sales_summary** table.
 3. **Data Cleaning** – Missing values filled, data types fixed, and calculated metrics added:
@@ -23,7 +23,7 @@ Project Structure
 
 ---
 
-## 📊 Key Insights & Visuals
+##  Key Insights & Visuals
 
 ### **1️⃣ Vendor Contribution & Market Share**
 ![Pareto Vendor Contribution](reports/images/pareto_vendor_contribution.png)
@@ -79,7 +79,7 @@ Project Structure
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 - Automate data ingestion via scheduled ETL pipelines.
 - Add forecasting models to predict vendor performance.
 - Integrate dashboarding tools (Power BI / Tableau) for real-time reporting.
@@ -87,7 +87,7 @@ Project Structure
 
 ---
 
-## 📌 How to Run the Project
+##  How to Run the Project
 ```bash
 # 1. Clone repository
 git clone https://github.com/your-username/vendor-sales-summary.git
