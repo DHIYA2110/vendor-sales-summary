@@ -5,23 +5,7 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 
 
 Project Structure
-vendor-sales-summary/
-│
-├── data/                           # Raw CSV data files
-├── logs/                           # Logs for ingestion and processing
-├── ingestion.py                    # Ingests CSV files into SQLite DB
-├── get_vendor_summary.py           # Merges datasets, cleans data, and creates vendor_sales_summary
-├── exploratory data analysis.ipynb # EDA: data inspection & cleaning
-├── Vendor Performance Analysis.ipynb # KPI computation & visualization
-├── graphs/                         # Final plots for README & reports
-│   ├── donut_chart.png
-│   ├── top_vendors_by_sales.png
-│   ├── top_brands_by_sales.png
-│   ├── pareto_vendor_contribution.png
-│   ├── profit_margin_confidence_interval.png
-│   ├── bulk_purchase_vs_unit_price.png
-│   ├── brands_for_promotional_pricing_adj.png
-└── README.md
+![project_structure](reports/images/project_structure.png)
 
 
 ---
