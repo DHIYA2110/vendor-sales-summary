@@ -1,123 +1,122 @@
-# Vendor-Sales-Summary
-Vendor performance analysis using Python, Power BI, and SQL
-
-## Dashboard
-
-[Power BI dashboard](https://drive.google.com/file/d/1Rwdx3EMwJHD_2IxDLvlZ6Z7xy-sfWL6j/view?usp=sharing)
-
-[DASHBOARD PDF](https://drive.google.com/file/d/1c4N_bqLmh0rL4J8pTm9oulegKOOU07H7/view?usp=sharing)
-
-## Dataset
-
-- `vendor_sales_summary.csv` – Final processed dataset for analysis
-
-[LINK](https://drive.google.com/file/d/1Ezu1uxLJZTXoh5iu5s9cLuLy7Xn6Rmup/view?usp=sharing)
+Vendor Sales Summary & Performance Analysis
+📌 Project Overview
+This project analyzes vendor sales performance by integrating and transforming raw sales, purchase, pricing, and freight datasets into a single vendor sales summary table.
+The analysis focuses on profitability, inventory efficiency, vendor contributions, and pricing strategies, with actionable business insights and visualizations.
 
 
-#REPORT
-
-[REPORT LINK](https://drive.google.com/file/d/1z5KsJbD5laBcCtfjLOTn1eW0IrTJMEHz/view?usp=drive_link)
-
-
-# Vendor Sales Summary Analysis
-
-## Business Problem
-Business Problem
-Effective inventory and sales management are critical for optimizing profitability in the retail and wholesale industry. Companies need to ensure that they are not incurring losses due to inefficient pricing, poor inventory turnover, or vendor dependency. The goal of this analysis is to:
-
-• Identify underperforming brands that require promotional or pricing adjustments.
-
-• Determine top vendors contributing to sales and gross profit.
-
-• Analyze the impact of bulk purchasing on wnit costs.
-
-• Assess inventory turnover to reduce holding costs and improve efficiency.
-
-• Investigate the profitability variance between high-performing and low-performing vendors.
+Project Structure
+vendor-sales-summary/
+│
+├── data/                           # Raw CSV data files
+├── logs/                           # Logs for ingestion and processing
+├── ingestion.py                    # Ingests CSV files into SQLite DB
+├── get_vendor_summary.py           # Merges datasets, cleans data, and creates vendor_sales_summary
+├── exploratory data analysis.ipynb # EDA: data inspection & cleaning
+├── Vendor Performance Analysis.ipynb # KPI computation & visualization
+├── graphs/                         # Final plots for README & reports
+│   ├── donut_chart.png
+│   ├── top_vendors_by_sales.png
+│   ├── top_brands_by_sales.png
+│   ├── pareto_vendor_contribution.png
+│   ├── profit_margin_confidence_interval.png
+│   ├── bulk_purchase_vs_unit_price.png
+│   ├── brands_for_promotional_pricing_adj.png
+└── README.md
 
 
-## Project Workflow
-1. Data Collection & Integration
+---
 
-Combined multiple datasets: purchases, sales, vendor invoices, purchase prices, and inventory data.
+## 🔄 Methodology
+1. **Data Ingestion** – All raw CSV files are loaded into `inventory.db` using `ingestion_db.py`.
+2. **Data Transformation** – `get_vendor_summary.py` merges purchase, sales, price, and freight data to create a **vendor_sales_summary** table.
+3. **Data Cleaning** – Missing values filled, data types fixed, and calculated metrics added:
+   - `GrossProfit`
+   - `ProfitMargin`
+   - `StockTurnover`
+   - `SalesToPurchaseRatio`
+4. **Exploratory Data Analysis** – Performed in `vendor_performance_analysis.ipynb`.
+5. **Visualization & Insights** – Created impactful graphs to communicate business findings.
 
-2. Data Cleaning & Preprocessing
+---
 
-Removed inconsistent or irrelevant records (e.g., zero sales quantities, negative profits/margins).
+## 📊 Key Insights & Visuals
 
-Standardized vendor names and product descriptions.
+### **1️⃣ Vendor Contribution & Market Share**
+![Pareto Vendor Contribution](reports/images/pareto_vendor_contribution.png)
+- **Top 10 vendors** account for a significant percentage of total purchases, indicating a **high vendor concentration** and potential **supply chain risk**.
+- Some vendors have **dominant purchase shares but lower sales performance**, signaling possible **inventory overstock** or **slow-moving goods**.
+- **Strategic implication**: Consider renegotiating contracts with high-purchase but low-sales vendors to improve ROI.
 
-3. Exploratory Data Analysis (EDA)
+---
 
-Identified outliers in prices, freight costs, and stock turnover.
+### **2️⃣ Sales Performance Leaders**
+![Top Vendors by Sales](reports/images/top_10_vendors_by_sales.png)
+![Top Brands by Sales](reports/images/top_btrands_by_sales.png)
+- **Top Vendors by Sales** clearly show a **core group driving revenue**, making them priority partners for **marketing and promotional investments**.
+- **Top Brands by Sales** reveal **customer preferences**, helping guide **inventory planning** and **brand-focused promotions**.
+- **Strategic implication**: Allocate more shelf space and marketing budget to high-performing brands while monitoring underperformers for replacement.
 
-Assessed vendor contribution and sales performance.
+---
 
-4. Vendor Performance Analysis
+### **3️⃣ Profitability Analysis**
+![Vendor Profit Margin Distribution](reports/images/vendor_profit_margin_distribution.png)
+![Profit Margin Confidence Interval](reports/images/profit_margin_confidence_interval.png)
+- **Profit Margin Distribution** shows strong margins for certain vendors, while others have **thin or negative margins**, potentially due to **discount-heavy strategies** or **pricing misalignment**.
+- **Confidence interval analysis** indicates a **clear performance gap** between top and bottom vendors, suggesting that **margin optimization** could boost overall profitability.
+- **Strategic implication**: Prioritize partnerships with high-margin vendors and adjust pricing for low-margin brands.
 
-Measured Gross Profit, Profit Margin, Stock Turnover, and Sales-to-Purchase Ratios.
+---
 
-Segmented vendors into top performers and low performers.
+### **4️⃣ Pricing & Promotional Opportunities**
+![Brands for Promotional Pricing Adjustment](reports/images/brands_for_promotional_pricing_adj.png)
+- The **Promotional Pricing Adjustment scatter plot** identifies brands where **price changes** could stimulate demand without hurting profitability.
+- **Strategic implication**: Run targeted price tests for low-selling, high-margin brands to increase turnover.
 
-5. Correlation & Statistical Analysis
+---
 
-Analyzed relationships between pricing, sales, margins, and turnover.
+### **5️⃣ Purchase Efficiency & Cost Optimization**
+![Bulk Purchase vs Unit Price](reports/images/bulk_purchase_vs_unit_price.png)
+- **Bulk Purchase Impact on Unit Price** confirms that **larger purchase volumes** often secure **lower per-unit costs**, validating bulk procurement strategies.
+- **Strategic implication**: Increase bulk orders for fast-moving products to maximize cost efficiency.
 
-Conducted hypothesis testing to compare profit margins between top-selling and low-selling vendors.
+---
 
-6. Actionable Insights & Recommendations
+### **6️⃣ Pareto Vendor Analysis**
+*(Already shown in Section 1)*
+- Pareto chart confirms that **~20% of vendors contribute ~80% of total purchases**, reinforcing the need to **focus relationship management** on these key players.
+- **Strategic implication**: Strengthen terms with the top 20% vendors to secure better pricing and priority supply.
 
-Derived data-backed strategies for pricing optimization, inventory management, and vendor diversification.
+---
 
+### **7️⃣ Operational Metrics from Vendor Summary**
+- **Stock Turnover** analysis shows certain vendors have **slower-moving stock**, increasing **holding costs**.
+- **Sales-to-Purchase Ratio** highlights inefficiencies in converting purchases into sales for some vendors.
+- **Strategic implication**: Optimize reorder points and negotiate flexible purchase agreements for slow-moving inventory.
 
-## Key Insights
-1.Losses & Zero-Sales Products
+---
 
-Gross profit has a minimum of –52,002, indicating losses on certain products (e.g., sold below cost).
+## 🚀 Future Improvements
+- Automate data ingestion via scheduled ETL pipelines.
+- Add forecasting models to predict vendor performance.
+- Integrate dashboarding tools (Power BI / Tableau) for real-time reporting.
+- Enhance data quality checks to handle missing or inconsistent records.
 
-Some products show zero sales, tying up $2.71M in unsold inventory.
+---
 
-2. Vendor Dependency
+## 📌 How to Run the Project
+```bash
+# 1. Clone repository
+git clone https://github.com/your-username/vendor-sales-summary.git
+cd vendor-sales-summary
 
-Top 10 vendors contribute 65.69% of total purchases — over-reliance on a small vendor group increases supply chain risk.
+# 2. Install dependencies
+pip install -r requirements.txt
 
-3.Bulk Purchasing Advantage
+# 3. Run ingestion script to load data into database
+python ingestion_db.py
 
-Bulk orders reduce per-unit costs by ~72%, significantly improving profitability.
+# 4. Generate vendor sales summary table
+python get_vendor_summary.py
 
-4. Profitability Differences Between Vendor Segments
-
-Top vendors: Profit margin ≈ 31.17%
-
-Low-performing vendors: Profit margin ≈ 41.55% (but low sales).
-
-Hypothesis testing confirms statistically significant differences in profitability models.
-
-5.Pricing & Margin Correlations
-
-Weak correlation between purchase price and revenue (–0.012), indicating that pricing changes alone don’t drive sales.
-
-Negative correlation between sales price and profit margin (–0.179), suggesting aggressive pricing cuts into margins.
-
-6. Freight & Logistics Inefficiencies
-
-Freight costs vary widely (0.09 – 257,032), indicating erratic shipping practices or bulk shipment disparities.
-
-7. Stock Turnover Gaps
-
-Stock turnover ranges 0 – 274.5, meaning some products sell very quickly while others stagnate.
-
-## Recommendations
-• Re-evaluate pricing for low-sales, high-margin brands to boost sales volume without sacrificing profitability.
-
-• Diversify vendor partnerships to reduce dependency on a few suppliers and mitigate supply chain risks.
-
-• Leverage bulk purchasing advantages to maintain competitive pricing while optimizing inventory management.
-
-• Optimize slow-moving inventory by adjusting purchase quantities, launching clearance sales, or revising storage strategies.
-
-• Enhance marketing and distribution strategies for low-performing vendors to drive higher sales volumes without compromising profit margins.
-
-• By implementing these recommendations, the company can achieve sustainable profitability, mitigate risks, and enhance overall operational efficiency
-
-
+# 5. Open Jupyter Notebook for analysis
+jupyter notebook notebooks/vendor_performance_analysis.ipynb
