@@ -1,4 +1,4 @@
-### Vendor Sales Summary 
+## Vendor Sales Summary 
 
  ## Project Overview
 This project analyzes vendor sales performance by integrating and transforming raw sales, purchase, pricing, and freight datasets into a single vendor sales summary table.
