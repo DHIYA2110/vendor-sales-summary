@@ -11,16 +11,31 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 ---
 
 ##  Methodology
-1. **Data Ingestion** – All raw CSV files are loaded into `inventory.db` using `ingestion_db.py`.
-2. **Data Transformation** – `get_vendor_summary.py` merges purchase, sales, price, and freight data to create a **vendor_sales_summary** table.
-3. **Data Cleaning** – Missing values filled, data types fixed, and calculated metrics added:
-   - `GrossProfit`
-   - `ProfitMargin`
-   - `StockTurnover`
-   - `SalesToPurchaseRatio`
-4. **Exploratory Data Analysis** – Performed in `vendor_performance_analysis.ipynb`.
-5. **Visualization & Insights** – Created impactful graphs to communicate business findings.
+1. Data Ingestion – All raw CSV files loaded into inventory.db using ingestion_db.py.
 
+2. Data Transformation – get_vendor_summary.py merges purchases, sales, price, and freight data to create a consolidated vendor_sales_summary table.
+
+3. Data Cleaning –
+
+Missing values handled
+
+Data types standardized
+
+Calculated business metrics:
+
+GrossProfit
+
+ProfitMargin
+
+StockTurnover
+
+SalesToPurchaseRatio
+
+4. Exploratory Data Analysis (EDA) – Conducted in vendor_performance_analysis.ipynb to identify trends, anomalies, and performance patterns.
+
+5. Visualization & Insights – Created impactful Python-based visualizations to communicate business findings.
+
+6. Interactive Dashboarding (Power BI) – Developed an interactive Power BI dashboard providing dynamic filtering, vendor comparison, and drill-down capabilities for decision-makers.
 ---
 
 ##  Key Insights & Visuals
