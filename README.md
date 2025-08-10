@@ -27,20 +27,21 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 
 ### **1️⃣ Vendor Contribution & Market Share**
 ![Pareto Vendor Contribution](reports/images/pareto_vendor_contribution.png)
+-65.69% of purchases come from the top 10 vendors.
+-Heavy vendor dependency introduces supply chain risk — diversification recommended.
 - **Top 10 vendors** account for a significant percentage of total purchases, indicating a **high vendor concentration** and potential **supply chain risk**.
 - Some vendors have **dominant purchase shares but lower sales performance**, signaling possible **inventory overstock** or **slow-moving goods**.
-- **Strategic implication**: Consider renegotiating contracts with high-purchase but low-sales vendors to improve ROI.
 
 ---
 
 ### **2️⃣ Sales Performance Leaders**
 ![Top Vendors by Sales](reports/images/top_10_vendors_by_sales.png)
 ![Top Brands by Sales](reports/images/top_btrands_by_sales.png)
+-198 brands have low sales but high margins.
+-Opportunity to boost volumes without sacrificing profitability.
 - **Top Vendors by Sales** clearly show a **core group driving revenue**, making them priority partners for **marketing and promotional investments**.
 - **Top Brands by Sales** reveal **customer preferences**, helping guide **inventory planning** and **brand-focused promotions**.
-- **Strategic implication**: Allocate more shelf space and marketing budget to high-performing brands while monitoring underperformers for replacement.
 
----
 
 ### **3️⃣ Profitability Analysis**
 
@@ -60,6 +61,8 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 
 ### **5️⃣ Purchase Efficiency & Cost Optimization**
 ![Bulk Purchase vs Unit Price](reports/images/bulk_purchase_vs_unit_price.png)
+-Bulk orders lower unit cost by ~72% ($10.78 vs. smaller-order prices).
+-Encourages larger vendor orders while maintaining margins.
 - **Bulk Purchase Impact on Unit Price** confirms that **larger purchase volumes** often secure **lower per-unit costs**, validating bulk procurement strategies.
 - **Strategic implication**: Increase bulk orders for fast-moving products to maximize cost efficiency.
 
@@ -67,11 +70,15 @@ The analysis focuses on profitability, inventory efficiency, vendor contribution
 
 
 ### **6️⃣  Operational Metrics from Vendor Summary**
+-$2.71M capital locked in slow-moving inventory.
+-Key low-turnover vendors:
+
+ ALISA CARR BEVERAGES (0.615x turnover)
+ HIGHLAND WINE MERCHANTS LLC (0.708x turnover)
+ PARK STREET IMPORTS LLC (0.751x turnover)
 - **Stock Turnover** analysis shows certain vendors have **slower-moving stock**, increasing **holding costs**.
 - **Sales-to-Purchase Ratio** highlights inefficiencies in converting purchases into sales for some vendors.
-- **Strategic implication**: Optimize reorder points and negotiate flexible purchase agreements for slow-moving inventory.
 
----
 
 ##  Future Improvements
 - Automate data ingestion via scheduled ETL pipelines.
